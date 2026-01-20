@@ -1,4 +1,4 @@
- local a=string.char
+flocal a=string.char
 local b=game:GetService(a(80,108,97,121,101,114,115)).LocalPlayer
 local c=b:WaitForChild(a(80,108,97,121,101,114,71,117,105))
 
