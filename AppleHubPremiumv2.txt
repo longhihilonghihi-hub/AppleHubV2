@@ -1,85 +1,80 @@
-local CoreGui = game:GetService("CoreGui")
-local Players = game:GetService("Players")
-local plr = Players.LocalPlayer
-
-local REAL_KEY = "Longdz-1234VietNamese"
-local KEY_FILE = "AppleHub_Key.txt"
-
--- ===== AUTO LOAD (FILE > SESSION) =====
-pcall(function()
-	if readfile and isfile and isfile(KEY_FILE) then
-		if readfile(KEY_FILE) == REAL_KEY then
-			loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/AppleHubPremium/main/AppleHub.txt"))()
-			return
-		end
-	end
-end)
-
-getgenv().APPLE_KEY_OK = getgenv().APPLE_KEY_OK or false
-if getgenv().APPLE_KEY_OK then
-	loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/AppleHubPremium/main/AppleHub.txt"))()
-	return
-end
+ local a=string.char
+local b=game:GetService(a(80,108,97,121,101,114,115)).LocalPlayer
+local c=b:WaitForChild(a(80,108,97,121,101,114,71,117,105))
 
 pcall(function()
-	CoreGui:FindFirstChild("AppleHubKeyUI"):Destroy()
+    c:FindFirstChild(a(65,112,112,108,101,72,117,98,75,101,121,85,73)):Destroy()
 end)
 
-local gui = Instance.new("ScreenGui", CoreGui)
-gui.Name = "AppleHubKeyUI"
-gui.ResetOnSpawn = false
+local d=Instance.new(a(83,99,114,101,101,110,71,117,105))
+d.Name=a(65,112,112,108,101,72,117,98,75,101,121,85,73)
+d.Parent=c
+d.ResetOnSpawn=false
 
-local main = Instance.new("Frame", gui)
-main.Size = UDim2.new(0, 380, 0, 300)
-main.Position = UDim2.new(0.5, -190, 0.5, -150)
-main.BackgroundColor3 = Color3.fromRGB(255,210,220)
-Instance.new("UICorner", main).CornerRadius = UDim.new(0,18)
+local e=Instance.new(a(70,114,97,109,101),d)
+e.Size=UDim2.new(0,380,0,260)
+e.Position=UDim2.new(0.5,-190,0.5,-130)
+e.BackgroundColor3=Color3.fromRGB(255,210,220)
+e.BorderSizePixel=0
+Instance.new(a(85,73,67,111,114,110,101,114),e).CornerRadius=UDim.new(0,18)
 
-local box = Instance.new("TextBox", main)
-box.Size = UDim2.new(1,-40,0,36)
-box.Position = UDim2.new(0,20,0,70)
-box.PlaceholderText = "Nhập Key..."
-box.BackgroundColor3 = Color3.fromRGB(255,255,255)
-box.TextColor3 = Color3.fromRGB(40,40,40)
-Instance.new("UICorner", box).CornerRadius = UDim.new(0,10)
+local f=Instance.new(a(73,109,97,103,101,76,97,98,101,108),e)
+f.Size=UDim2.new(0,50,0,50)
+f.Position=UDim2.new(0,10,0,10)
+f.Image=a(114,98,120,97,115,115,101,116,105,100,58,47,47,49,50,50,51,50,53,48,56,57,48,49,48,55,48,55)
+f.BackgroundTransparency=1
 
-local save = Instance.new("TextButton", main)
-save.Size = UDim2.new(1,-40,0,32)
-save.Position = UDim2.new(0,20,0,115)
-save.Text = "☐ Save Key"
-save.BackgroundColor3 = Color3.fromRGB(255,180,200)
-save.TextColor3 = Color3.new(1,1,1)
-Instance.new("UICorner", save).CornerRadius = UDim.new(0,8)
+local g=Instance.new(a(84,101,120,116,76,97,98,101,108),e)
+g.Size=UDim2.new(1,-70,0,40)
+g.Position=UDim2.new(0,70,0,10)
+g.Text=a(65,112,112,108,101,32,72,117,98,32,80,114,101,109,105,117,109)
+g.Font=Enum.Font.GothamBold
+g.TextSize=18
+g.TextColor3=Color3.fromRGB(255,80,120)
+g.BackgroundTransparency=1
 
-local saveKey = false
-save.MouseButton1Click:Connect(function()
-	saveKey = not saveKey
-	save.Text = saveKey and "☑ Save Key" or "☐ Save Key"
+local h=Instance.new(a(84,101,120,116,66,111,120),e)
+h.Size=UDim2.new(1,-40,0,36)
+h.Position=UDim2.new(0,20,0,70)
+h.PlaceholderText=a(78,104,225,186,173,112,32,75,101,121,46,46,46)
+h.Font=Enum.Font.Gotham
+h.TextSize=15
+h.BackgroundColor3=Color3.fromRGB(255,255,255)
+h.TextColor3=Color3.fromRGB(40,40,40)
+Instance.new(a(85,73,67,111,114,110,101,114),h).CornerRadius=UDim.new(0,10)
+
+local i=Instance.new(a(84,101,120,116,66,117,116,116,111,110),e)
+i.Size=UDim2.new(0.45,-5,0,36)
+i.Position=UDim2.new(0,20,0,120)
+i.Text=a(71,101,116,32,75,101,121)
+i.Font=Enum.Font.GothamBold
+i.TextSize=15
+i.BackgroundColor3=Color3.fromRGB(255,120,160)
+i.TextColor3=Color3.new(1,1,1)
+Instance.new(a(85,73,67,111,114,110,101,114),i).CornerRadius=UDim.new(0,10)
+
+local j=Instance.new(a(84,101,120,116,66,117,116,116,111,110),e)
+j.Size=UDim2.new(0.45,-5,0,36)
+j.Position=UDim2.new(0.55,5,0,120)
+j.Text=a(69,110,116,101,114)
+j.Font=Enum.Font.GothamBold
+j.TextSize=15
+j.BackgroundColor3=Color3.fromRGB(120,200,160)
+j.TextColor3=Color3.new(1,1,1)
+Instance.new(a(85,73,67,111,114,110,101,114),j).CornerRadius=UDim.new(0,10)
+
+i.MouseButton1Click:Connect(function()
+    if setclipboard then
+        setclipboard(a(104,116,116,112,115,58,47,47,108,105,110,107,52,115,117,98,46,99,111,109,47,109,101,116,108,113,85,67,78,54,114))
+    end
 end)
 
-local enter = Instance.new("TextButton", main)
-enter.Size = UDim2.new(1,-40,0,36)
-enter.Position = UDim2.new(0,20,0,160)
-enter.Text = "Enter"
-enter.BackgroundColor3 = Color3.fromRGB(120,200,160)
-enter.TextColor3 = Color3.new(1,1,1)
-Instance.new("UICorner", enter).CornerRadius = UDim.new(0,10)
-
-enter.MouseButton1Click:Connect(function()
-	if box.Text == REAL_KEY then
-		if saveKey then
-			if writefile then
-				pcall(function()
-					writefile(KEY_FILE, REAL_KEY) -- FILE SAVE (PC executor)
-				end)
-			else
-				getgenv().APPLE_KEY_OK = true -- SESSION SAVE (Delta)
-			end
-		end
-		gui:Destroy()
-		loadstring(game:HttpGet("https://raw.githubusercontent.com/longhihilonghihi-hub/AppleHubPremium/main/AppleHub.txt"))()
-	else
-		box.Text = ""
-		box.PlaceholderText = "Sai key!"
-	end
+j.MouseButton1Click:Connect(function()
+    if h.Text==a(76,111,110,103,100,122,45,49,50,51,52,86,105,101,116,78,97,109,101,115,101) then
+        d:Destroy()
+        loadstring(game:HttpGet(a(104,116,116,112,115,58,47,47,114,97,119,46,103,105,116,104,117,98,117,115,101,114,99,111,110,116,101,110,116,46,99,111,109,47,108,111,110,103,104,105,104,105,108,111,110,103,104,105,104,105,45,104,117,98,47,65,112,112,108,101,72,117,98,80,114,101,109,105,117,109,47,109,97,105,110,47,65,112,112,108,101,72,117,98,46,116,120,116)))()
+    else
+        h.Text=""
+        h.PlaceholderText=a(83,97,105,32,107,101,121,33)
+    end
 end)
